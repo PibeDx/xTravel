@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Registro de cursos</h1>
+	<p>Nombre: <input type="text" name="" id="nombre"/></p>
+	<p>Precio: <input type="text" name="" id="precio"/></p>
+	<p>Descuento: <input type="text" name="" id="descuento"/></p>
+	<p>Apertura: <input type="text" name="" id="apertura"/></p>
+	<p><button id="guardar">Guardar</button></p>
+	<p><button id="add">Add</button></p>
+
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBUMkPzyWJDRpQ-0asvJgqEpUFanbtQYR4",
+    authDomain: "project-6381816712702858280.firebaseapp.com",
+    databaseURL: "https://project-6381816712702858280.firebaseio.com",
+    storageBucket: "project-6381816712702858280.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+
+	$('#guardar').on('click',saveCursos);
+	function saveCursos(e){
+		var nombre		= $('#nombre').val();
+		var precio 		= $('#precio').val();
+		var descuento 	= $('#descuento').val();
+		var apertura 	= $('#apertura').val();
+		console.log(nombre);
+		firebase.database().ref().set({
+			cursos:[{
+			    nombre: nombre,
+			    precio: precio,
+			    descuento: descuento,
+			    apertura: apertura
+		    }]
+		});
+
+		/*
+		var newCursosKey = firebase.database().ref().set({
+			nombre: nombre,
+			precio: precio,
+			descuento: descuento,
+			apertura: apertura
+		});
+		*/
+
+	};
+
+
+
+
+</script>
+	
+</script>
+</body>
+</html>
