@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FacebookLogin</title>
+  </head>
+  <body>
+​
+​
+​
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBUMkPzyWJDRpQ-0asvJgqEpUFanbtQYR4",
+        authDomain: "project-6381816712702858280.firebaseapp.com",
+        databaseURL: "https://project-6381816712702858280.firebaseio.com",
+        storageBucket: "project-6381816712702858280.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+​
+​
+      <script type="text/javascript">
+        var provider = new firebase.auth.FacebookAuthProvider();
+        provider.addScope('user_birthday');
+        provider.addScope('email');
+        provider.addScope('public_profile');
+        console.console.log(user);
+​
+​
+​
+​
+​
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+          // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+          var token = result.credential.accessToken;
+          // The signed-in user info.
+          var user = result.user;
+          // ...
+        }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          // ...
+        });
+​
+      </script>
+      <div id="fb-root"></div>
+<!--javascript jdk-->
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.6&appId=1278197212210098";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!--
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '876615765775810',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+-->
+<!--Botones facebook-->
+    <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="true"></div>
+  </body>
+</html>

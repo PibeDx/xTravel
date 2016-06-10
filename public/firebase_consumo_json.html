@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Nombre: </p><input type="text" id="nombre" value="hola"></input><br>
+	<p>Descripcion: </p><input type="text" id="descripcion"></input><br>
+	<p>Pais: </p><input type="text" id="pais"></input><br>
+	<p>Departamento: </p><input type="text" id="departamento"></input><br>
+	<p>Provincia: </p><input type="text" id="provincia"></input><br>
+	<p>Distrito: </p><input type="text" id="distrito"></input><br>
+	
+	<p>Latitud: </p><input type="text" id="latitud"></input><br>
+	<p>Longitud: </p><input type="text" id="longitud"></input><br>
+	<p>Altitud: </p><input type="text" id="altitud"></input><br>
+
+	<button id="enviar">Enviar</button>
+
+<script src="js/jquery-3.0.0.min.js"></script>	
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBUMkPzyWJDRpQ-0asvJgqEpUFanbtQYR4",
+    authDomain: "project-6381816712702858280.firebaseapp.com",
+    databaseURL: "https://project-6381816712702858280.firebaseio.com",
+    storageBucket: "project-6381816712702858280.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+
+
+	$(document).ready(function(){
+		var nombre 			= $("#nombre").val();
+		var descripcion 	= $("#descripcion").val();
+		var pais 			= $("#pais").val();
+		var departamento 	= $("#departamento").val();
+		var provincia 		= $("#provincia").val();
+		var distrito 		= $("#distrito").val();
+
+		var latitud 		= $("#latitud").val();
+		var longitud 		= $("#longitud").val();
+		var altitud 		= $("#altitud").val();
+		console.log(nombre);
+		$('#enviar').on('click', function(){
+			$.ajax
+			    ({
+			        type: "POST",
+			        contentType: 'application/json',
+			        //th1e url where you want to sent the userName and password to
+			        url: "https://project-6381816712702858280.firebaseio.com/empresas.json",
+			        //dataType: 'application/json',
+			        //async: false,
+			        //json object to sent to the authentication url
+			        data: 
+		        		JSON.stringify({
+						    "nombre":nombre,
+						    "descripcion":descripcion,
+						    "pais":pais,
+						    "departamento":departamento,
+						    "provincia":provincia,
+						    "distrito":distrito,
+						    "geo":
+						        {
+						            "latitud":latitud,
+						            "longitud":longitud,
+						            "altitud":altitud
+						        }
+						}),
+			        success: function () {
+		        		alert("Se creo!!"); 
+			        }
+			    });
+		});
+
+	});
+</script>
+
+</body>
+</html>

@@ -11,7 +11,7 @@
     <title>xTravel</title>
 
     <!--Angular JS-->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="js/app.js"></script>
 
     <!-- Bootstrap Core CSS -->
@@ -19,7 +19,7 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -135,8 +135,8 @@
     <div class = "container" ng-controller="cursosController as curso">
         <div class="row">
 
-            <input type="text" ng-model="search.name" placeholder="¿Qué curso quieres buscar?"><!--el signo $ me indica que busca todo-->
-
+            <input type="text" ng-model="search.Nombre" placeholder="¿Qué curso quieres buscar?"><!--el signo $ me indica que busca todo-->
+<!-- 
             <div class="card col s4" ng-repeat="c in curso.collection | filter: search | orderBy: 'name':0 ">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="{{c.img}}">
@@ -154,7 +154,34 @@
 
                     </p>
                 </div>
+            </div> -->
+
+<!-- new -->
+
+            <div class="card col s4" ng-repeat="c in curso.lista | filter: search | orderBy: 'Nombre':0 ">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{c.img}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{c.Nombre}}<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">Liga!</a></p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">{{c.Nombre}}<i class="material-icons right">close</i></span>
+                    <p>
+                        Fecha: {{c.Idioma}} <br>
+                        Lugar: {{c.Lugar}} <br>
+                        Empresa: {{c.Institucion}} <br>
+                        Costo: {{c.Costo}}
+                        Horas de estudio: {{c.horas}}
+
+                    </p>
+                </div>
             </div>
+
+
+        </div>
+    </div>
 
 
 </section>

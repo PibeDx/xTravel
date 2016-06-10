@@ -53,7 +53,62 @@
                 'year' :  2016,
                 'category': 'Sci-Fi'
             }
-        ]
+        ];
+
+
+
+        curso.lista = [
+            {
+                "Nombre": "Berlin Live",
+                "Idioma": "alemán",
+                "Lugar": "Berlín, Alemania",
+                "Institucion": "Institut für Internationale Kommunikation e.V.",
+                "Fechas": "2 al 27 de agosto de 2016",
+                "Costo": "495 euros",
+                "horas": "25 horas/semana",
+                "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
+            },
+            {
+                "Nombre": "Cursos de Lengua y Civilización Francesa",
+                "Idioma": "francés",
+                "Lugar": "París, Francia",
+                "Institucion": "Université Paris-Sorbonne",
+                "Fechas": "1 al 28 de septiembre de 2016",
+                "Costo": "770 euros",
+                "horas": "12 horas/semana",
+                "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
+            },
+            {
+                "Nombre": "Cursos de Lengua y Civilización Francesa",
+                "Idioma": "francés",
+                "Lugar": "Faro, Portugal",
+                "Institucion": "Universidade do Algarve",
+                "Fechas": "4 al 22 de julio de 2016",
+                "Costo": "350 euros",
+                "horas": "57 horas totales más 20 de módulos culturales",
+                "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
+            },
+            {
+                "Nombre": "Cursos de Lengua y Civilización Francesa",
+                "Idioma": "francés",
+                "Lugar": "Faro, Portugal",
+                "Institucion": "Universidade do Algarve",
+                "Fechas": "4 al 22 de julio de 2016",
+                "Costo": "350 euros",
+                "horas": "57 horas totales más 20 de módulos culturales",
+                "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
+            },
+            {
+                "Nombre": "SDI Deutsch als Fremdsprache",
+                "Idioma": "alemán",
+                "Lugar": "Munich, Alemania",
+                "Institucion": "Hochschule für Angewandte Sprachen",
+                "Fechas": "1 al 26 de julio de 2016",
+                "Costo": "480 euros",
+                "horas": "25 horas/semana",
+                "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
+            }
+        ];
     }
 
 })();
