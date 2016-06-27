@@ -69,7 +69,7 @@
                 "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
             },
             {
-                "Nombre": "Cursos de Lengua y Civilización Francesa",
+                "Nombre": "Civilización Francesa",
                 "Idioma": "francés",
                 "Lugar": "París, Francia",
                 "Institucion": "Université Paris-Sorbonne",
@@ -79,8 +79,8 @@
                 "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
             },
             {
-                "Nombre": "Cursos de Lengua y Civilización Francesa",
-                "Idioma": "francés",
+                "Nombre": "Cursos de verao em Portugal",
+                "Idioma": "portugues",
                 "Lugar": "Faro, Portugal",
                 "Institucion": "Universidade do Algarve",
                 "Fechas": "4 al 22 de julio de 2016",
@@ -89,13 +89,13 @@
                 "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
             },
             {
-                "Nombre": "Cursos de Lengua y Civilización Francesa",
-                "Idioma": "francés",
-                "Lugar": "Faro, Portugal",
-                "Institucion": "Universidade do Algarve",
-                "Fechas": "4 al 22 de julio de 2016",
-                "Costo": "350 euros",
-                "horas": "57 horas totales más 20 de módulos culturales",
+                "Nombre": "Deutsch lernen in Frankfurt",
+                "Idioma": "alemán",
+                "Lugar": "Frankfurt am Main, Alemania",
+                "Institucion": "did deutsch institut",
+                "Fechas": "1 al 26 de agosto de 2016",
+                "Costo": "980 euros",
+                "horas": "25 horas por semana",
                 "img":"https://s3-media1.fl.yelpcdn.com/bphoto/BUvJ-nctZqDz3FrE7hY40w/ls.jpg"
             },
             {
